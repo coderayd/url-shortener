@@ -13,8 +13,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @Builder
 @EqualsAndHashCode
-@Table(name = "SHORT_URL")
-public class ShortUrl extends BaseEntity{
+@Table(name = "short_url")
+public class ShortUrl {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
