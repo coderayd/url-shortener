@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-@PropertySource("classpath:application-prod.properties")
+@PropertySource("classpath:application-${spring.profiles.active:default}.properties")
 // @Profile("default")
 public class UrlShortenerApplication {
 
