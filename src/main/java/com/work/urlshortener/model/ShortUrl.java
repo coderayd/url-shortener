@@ -13,6 +13,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Builder
 @EqualsAndHashCode
+@Table(name = "SHORT_URL")
 public class ShortUrl extends BaseEntity{
 
     @Id
