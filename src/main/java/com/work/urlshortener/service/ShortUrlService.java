@@ -47,7 +47,7 @@ public class ShortUrlService {
         return ResponseEntity.ok(shortUrlDtoConverter.entityToDto(shortUrl));
     }
 
-    public ResponseEntity<ShortUrlResponseDto> handlerRedirect(String code) throws URISyntaxException {
+    public ResponseEntity<?> handlerRedirect(String code) throws URISyntaxException {
 
         ShortUrl shortUrl = shortUrlRepository.findShortUrlByCode(code)
                 .orElseThrow(() -> new UrlNotFoundException("Short Url Not Found"));

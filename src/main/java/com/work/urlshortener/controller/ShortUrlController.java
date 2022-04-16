@@ -34,7 +34,7 @@ public class ShortUrlController {
     }
 
     @GetMapping("/{code}")
-    public ResponseEntity<ShortUrlResponseDto> handlerRedirect(@Valid @NotEmpty @PathVariable String code) throws URISyntaxException {
+    public ResponseEntity<?> handlerRedirect(@Valid @NotEmpty @PathVariable String code) throws URISyntaxException {
 
         return shortUrlService.handlerRedirect(code);
     }
